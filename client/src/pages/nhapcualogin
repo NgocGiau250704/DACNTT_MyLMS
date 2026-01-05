@@ -1,0 +1,158 @@
+//xử lý sự kiện khi client nhập dữ liệu vào form
+  // const changeInputHandler = (e, type) => {
+  //   const { name, value } = e.target;
+  //   if (type === "signup") {
+  //     setSignupInput({ ...signupInput, [name]: value });
+  //   } else {
+  //     setLoginInput({ ...loginInput, [name]: value });
+  //   }
+  // };
+
+  // const handleRegistration = (type) => {
+  //   const inputData = type === "signup" ? signupInput : loginInput;
+  //   console.log(inputData);
+  //   // goi api dang ki
+  //   try{
+  //     if (type === "signup") {
+  //      const res = await fetch('http://localhost:5000/api/users/register', {
+  //         method: 'POST',
+  //         headers: {
+  //           'Content-Type': 'application/json',
+  //         },
+  //         body: JSON.stringify(inputData),
+  //       });
+  //       const data = await res.json();
+  //       if (data.success) {
+  //         alert(data.message + " Please verify your email before logging in.");
+  //         setSignupInput({
+  //           name: "",
+  //           email: "",
+  //           password: "",
+  //         });
+  //       } else {
+  //         alert(data.message);
+  //       }
+  //     }
+  //   } catch (error) {
+  //     console.error("Error:", error);
+  //   }
+  // };
+
+  //   const handleLogin = async (e) => {
+  //   e.preventDefault();
+  //   const { email, password } = loginInput;
+  //   if (!email || !password) {
+  //     alert("All fields are required");
+  //     return;
+  //   }
+
+  //   const res = await loginUser(loginInput);
+  //   console.log("Response from loginUser:", res);
+  //   if (res?.data) {
+  //     console.log("Backend returned:", res.data);
+  //   } else {
+  //     console.log("No data returned from API.");
+  //   }
+
+  // };
+
+  // const handleLogin = async (e) => {
+  //   e.preventDefault();
+
+  //   const { email, password } = loginInput;
+  //   if (!email || !password) {
+  //     alert("All fields are required");
+  //     return;
+  //   }
+
+  //   try {
+  //     const { email, password } = loginInput;
+  //     const res = await loginUser(loginInput).unwrap();
+
+  //     console.log("Response from backend:", res);
+
+  //     if (res.success) {
+  //       dispatch(userLoggedIn({ user: res.user }));
+  //       // toast.success(res.message || "Welcome back!");
+
+  //       setTimeout(() => navigate("/dashboard"), 1000);
+  //     } else {
+  //       toast.error(res.message || "Login failed!");
+  //     }
+  //   } catch (error) {
+  //     console.error("Login error:", error);
+  //     toast.error("Login failed, please try again.");
+  //   }
+  // };
+
+  
+  // const handleSignup = async (e, type) => {
+  //   e.preventDefault();
+  //   const { name, email, password } = signupInput;
+  //   const inputData = type === "signup" ? signupInput : loginInput;
+  //   const action = type === "signup" ? registerUser : loginUser;
+  //   await action(inputData);
+  //   // const { name, email, password } = signupInput;
+  //   if (!name || !email || !password) {
+  //     alert("All fields are required");
+  //     return;
+  //   }
+  //   try {
+  //     const url = "http://localhost:8080/api/v1/user/register ";
+  //     const response = await fetch(url, {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({ name, email, password }),
+  //     });
+  //     console.log("status:", response.status);
+  //     console.log("statusText:", response.statusText);
+  //     console.log(signupInput);
+  //     const result = await response.json();
+  //     const { success, message, error } = result;
+  //     if (success) {
+  //       alert(message);
+  //       setTimeout(() => {
+  //         navigate("/login");
+  //       }, 1000);
+  //     } else if (result.error) {
+  //       //CHƯA FIX ĐƯỢC LỖI NHẬP MẬT KHẨU YẾU
+  //       return alert(
+  //         result.error.details[0].message ||
+  //           "Something went wrong. Please try again later."
+  //       );
+  //     } else if (!result.success) {
+  //       return alert(
+  //         result.message || "Something went wrong. Please try again later."
+  //       );
+  //     }
+  //   } catch (err) {
+  //     console.log(err);
+  //     return alert(
+  //       err.message || "Something went wrong. Please try again later."
+  //     );
+  //   }
+  // };
+
+    // useEffect(() => {
+    //   if (registerIsSuccess && registerData) {
+    //     toast.success(registerData.message || "Signup successful.");
+    //   }
+    //   if (registerError) {
+    //     toast.error(registerData.data.message || "Signup Failed");
+    //   }
+    //   if (loginIsSuccess && loginData) {
+    //     toast.success(loginData.message || "Login successful.");
+    //   }
+    //   if (loginError) {
+    //     toast.error(loginData.data.message || "Login Failed");
+    //   }
+    // }, [
+    //   loginIsLoading,
+    //   registerIsLoading,
+    //   loginData,
+    //   registerData,
+    //   loginError,
+    //   registerError,
+    // ]);

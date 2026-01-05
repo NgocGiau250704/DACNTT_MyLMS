@@ -1,0 +1,333 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-white  via-gray-800 to-gray-700 text-gray-100 min-h-screen flex flex-col font-sans;
+  }
+}
+
+@layer components {
+  .logo {
+    @apply h-24 p-3 transition-transform duration-500 ease-in-out hover:scale-110;
+  }
+
+  .logo.react {
+    @apply drop-shadow-[0_0_20px_#61dafbaa];
+  }
+
+  .card {
+    @apply bg-gray-800/60 backdrop-blur-md rounded-2xl p-6 shadow-lg flex flex-col items-center gap-4 mt-6;
+  }
+
+  button {
+    @apply px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-semibold transition-colors duration-200;
+  }
+
+  h1 {
+    @apply text-5xl font-extrabold mt-6 mb-3 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-sky-400 to-pink-400;
+  }
+
+  p {
+    @apply text-gray-300;
+  }
+
+  .read-the-docs {
+    @apply text-sm text-gray-400 mt-4 hover:text-gray-200 transition-colors;
+  }
+
+  @keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.logo.react {
+  @apply drop-shadow-[0_0_20px_#61dafbaa] animate-[spin-slow_10s_linear_infinite];
+}
+
+}
+
+/* 
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #d7d7e6;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Hộp trắng chia đôi */
+/* .signup-card {
+  display: flex;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  width: 900px;
+  max-width: 95%;
+} */
+
+/* Bên trái */
+/* .signup-left {
+  flex: 1;
+  background: #f6f7fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+} */
+/* .signup-left img {
+  max-width: 90%;
+  height: auto;
+} */
+
+/* Bên phải
+.signup-right {
+  flex: 1;
+  padding: 3rem;
+} */
+
+/* .signup-right h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.8rem;
+  color: #222;
+} */
+
+/* Input */
+/* .form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  background: #f9f9fb;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #6c63ff;
+} */
+
+/* Buttons */
+/* .btn-group {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.btn {
+  flex: 1;
+  padding: 0.9rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: #6c63ff;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #574fd6;
+}
+
+.btn.secondary {
+  background: #f1f1f5;
+  color: #333;
+}
+
+.btn.secondary:hover {
+  background: #e2e2ea;
+} */
+
+/* Terms */
+/* .terms {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.terms a {
+  color: #6c63ff;
+  text-decoration: none;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+} */
+
+/* Social links */
+/* .social-links {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.social-links a {
+  color: #6c63ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+} */ */
+
+/* forgot password */
+.forgot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #0360bd, #040042);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.forgot-box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  width: 350px;
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+.forgot-box h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  color: #2d3436;
+}
+
+.forgot-box .subtitle {
+  font-size: 0.9rem;
+  color: #636e72;
+  margin-bottom: 1.5rem;
+}
+
+.forgot-box input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 1.2rem;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.25s, box-shadow 0.25s;
+}
+
+.forgot-box input:focus {
+  border-color: #0984e3;
+  box-shadow: 0 0 6px rgba(9, 132, 227, 0.3);
+}
+
+.forgot-box button {
+  width: 100%;
+  padding: 12px;
+  background: #0984e3;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.15s;
+}
+
+.forgot-box button:hover {
+  background: #0873c4;
+  transform: translateY(-2px);
+  /* margin-bottom: 50px; */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* reset password */
+.reset-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, rgb(3, 73, 144)d, #040042);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.reset-box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  width: 360px;
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+.reset-box h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #2d3436;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  color: #636e72;
+  margin-bottom: 0.4rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #dfe6e9;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.25s, box-shadow 0.25s;
+}
+
+.form-group input:focus {
+  border-color: #0984e3;
+  box-shadow: 0 0 6px rgba(9, 132, 227, 0.3);
+}
+
+.reset-box button {
+  width: 100%;
+  padding: 12px;
+  background: #0984e3;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.15s;
+}
+
+.reset-box button:hover {
+  background: #0873c4;
+  transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
