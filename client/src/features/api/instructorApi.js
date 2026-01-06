@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const instructorApi = createApi({
   reducerPath: "instructorApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:8080/api/v1/instructor",
+    baseUrl: "https://dacntt-mylms-1.onrender.com/api/v1/instructor",
     credentials: "include",
   }),
   endpoints: (builder) => ({
