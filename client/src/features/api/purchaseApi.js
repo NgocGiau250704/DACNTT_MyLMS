@@ -7,7 +7,7 @@ export const COURSE_PURCHASE_API = "/api/v1/course";
 export const purchaseApi = createApi({
   reducerPath: "purchaseApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:8080",
+    baseUrl: "https://dacntt-mylms-1.onrender.com",
     credentials: "include",
   }),
   endpoints: (builder) => ({
