@@ -162,7 +162,7 @@ useEffect(() => {
 
   const checkPurchased = async () => {
     const res = await fetch(
-      `http://localhost:8080/api/v1/course/${courseId}/check-purchased?userId=${userId}`
+      `https://dacntt-mylms-1.onrender.com/api/v1/course/${courseId}/check-purchased?userId=${userId}`
     );
     const data = await res.json();
 
