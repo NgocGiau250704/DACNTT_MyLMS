@@ -1,7 +1,7 @@
 import { createApi } from "@reduxjs/toolkit/query/react";
 import { fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const COURSE_PROGRESS_API_URL = "http://localhost:8080/api/v1/progress";
+const COURSE_PROGRESS_API_URL = "https://dacntt-mylms-1.onrender.com/api/v1/progress";
 export const courseProgressApi = createApi({
   reducerPath: "courseProgressApi",
   baseQuery: fetchBaseQuery({
