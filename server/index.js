@@ -40,7 +40,7 @@ const PORT = process.env.PORT || 8080;
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: "http://localhost:3000",
+    origin: "https://dacntt-my-lms.vercel.app",
     credentials: true,
 }))
 
@@ -90,7 +90,7 @@ const httpServer = createServer(app);
 
 const io = new Server(httpServer, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://dacntt-my-lms.vercel.app",
     credentials: true,
   },
 });
