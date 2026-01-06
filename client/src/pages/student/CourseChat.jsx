@@ -4,7 +4,7 @@ import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import CloseIcon from "@mui/icons-material/Close";
 import SendIcon from "@mui/icons-material/Send";
 
-const socket = io("http://localhost:8080", {
+const socket = io("https://dacntt-mylms-1.onrender.com", {
   withCredentials: true,
 });
 
@@ -19,7 +19,7 @@ export default function CourseChat() {
 
   useEffect(() => {
     async function initChat() {
-      const res = await fetch("http://localhost:8080/api/v1/chat/init", {
+      const res = await fetch("https://dacntt-mylms-1.onrender.com/api/v1/chat/init", {
         credentials: "include",
       });
       const data = await res.json();
@@ -33,7 +33,7 @@ export default function CourseChat() {
 
   useEffect(() => {
     async function loadUser() {
-      const res = await fetch("http://localhost:8080/api/v1/user/profile", {
+      const res = await fetch("https://dacntt-mylms-1.onrender.com/api/v1/user/profile", {
         credentials: "include",
       });
       const data = await res.json();
@@ -49,7 +49,7 @@ export default function CourseChat() {
 
     async function loadMessages() {
       const res = await fetch(
-        `http://localhost:8080/api/v1/messages/${activeConv._id}`,
+        `https://dacntt-mylms-1.onrender.com/api/v1/messages/${activeConv._id}`,
         { credentials: "include" }
       );
       const data = await res.json();
