@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const assignmentApi = createApi({
   reducerPath: "assignmentApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:8080/api/v1/assignment",
+    baseUrl: "https://dacntt-mylms-1.onrender.com/api/v1/assignment",
     credentials: "include",
   }),
   tagTypes: ["Assignment"],
