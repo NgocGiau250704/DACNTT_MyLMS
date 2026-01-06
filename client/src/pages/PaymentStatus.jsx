@@ -44,7 +44,7 @@ hasConfirmed.current = true;
         vnp_PayDate: payDate,
       };
 
-      await fetch("http://localhost:8080/api/payment/vnpay/confirm", {
+      await fetch("https://dacntt-mylms-1.onrender.com/api/payment/vnpay/confirm", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -63,7 +63,7 @@ try {
   const token = user?.token;
 
   if (token) {
-    const resUser = await fetch("http://localhost:8080/api/auth/me", {
+    const resUser = await fetch("https://dacntt-mylms-1.onrender.com/api/auth/me", {
       headers: { Authorization: `Bearer ${token}` },
     });
 
