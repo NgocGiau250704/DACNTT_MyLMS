@@ -98,7 +98,7 @@ export default function CreateCourse() {
       setIsUploadingVideo(true);
       const token = localStorage.getItem("token");
       const res = await axios.post(
-        `http://localhost:8080/api/v1/course/${courseId}/upload-intro-video`,
+        `https://dacntt-mylms-1.onrender.com/api/v1/course/${courseId}/upload-intro-video`,
         formData,
         {
           headers: {
