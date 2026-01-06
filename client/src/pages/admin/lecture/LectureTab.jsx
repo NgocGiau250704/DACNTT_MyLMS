@@ -111,7 +111,7 @@ const LectureTab = () => {
     setMediaProgress(true);
     try {
       const res = await axios.post(
-        `http://localhost:8080/api/v1/course/lecture/${lectureId}/upload-video`,
+        `https://dacntt-my-lms.vercel.app/api/v1/course/lecture/${lectureId}/upload-video`,
         formData,
         {
           onUploadProgress: ({ loaded, total }) => {
