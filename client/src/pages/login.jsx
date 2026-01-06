@@ -95,7 +95,7 @@ export function Login() {
   }
 
   try {
-    const url = "http://localhost:8080/api/v1/user/register";
+    const url = "https://dacntt-mylms-1.onrender.com/api/v1/user/register";
     const response = await fetch(url, {
       method: "POST",
       headers: {
