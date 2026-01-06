@@ -42,6 +42,8 @@ app.use(cookieParser());
 app.use(cors({
     origin: "https://dacntt-my-lms.vercel.app",
     credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"], 
+    allowedHeaders: ["Content-Type", "Authorization"]
 }))
 
 app.use("/api/payment", vnpayRoutes);
