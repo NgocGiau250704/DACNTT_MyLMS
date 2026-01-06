@@ -64,7 +64,7 @@ localStorage.setItem("currentCourseId", courseId);
 console.log("Saved courseId:", courseId);
 
 
-  const res = await fetch("http://localhost:8080/api/payment/vnpay/create", {
+  const res = await fetch("https://dacntt-mylms-1.onrender.com/api/payment/vnpay/create", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -84,7 +84,7 @@ const createVnpayUrl = async () => {
   const user = JSON.parse(localStorage.getItem("user"));
   localStorage.setItem("currentCourseId", courseId);
 
-  const res = await fetch("http://localhost:8080/api/payment/vnpay/create", {
+  const res = await fetch("https://dacntt-mylms-1.onrender.com/api/payment/vnpay/create", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
