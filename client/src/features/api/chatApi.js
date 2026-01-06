@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const chatApi = createApi({
   reducerPath: "chatApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:8080/api/v1", // ✅ SỬA Ở ĐÂY
+    baseUrl: "https://dacntt-mylms-1.onrender.com/api/v1", 
     credentials: "include",
   }),
   endpoints: (builder) => ({
