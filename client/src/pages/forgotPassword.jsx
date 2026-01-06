@@ -13,7 +13,7 @@ export default function ForgotPassword() {
     e.preventDefault();
     try {
       const res = await fetch(
-        "http://localhost:8080/api/v1/user/forgot-password",
+        "https://dacntt-mylms-1.onrender.com/api/v1/user/forgot-password",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
