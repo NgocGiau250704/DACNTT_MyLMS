@@ -17,7 +17,7 @@ const HeroSection = () => {
     const fetchSuggestions = async () => {
       try {
         const res = await fetch(
-          `http://localhost:8080/api/v1/course/search/suggestions?q=${query}`
+          `https://dacntt-mylms-1.onrender.com/api/v1/course/search/suggestions?q=${query}`
         );
         const data = await res.json();
         setSuggestions(data.courses || []);
