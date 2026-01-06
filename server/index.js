@@ -78,6 +78,14 @@ app.use("/api/v1/chat", chatRoute);
 //app.listen(PORT, () => {
 //    console.log(`Server listen at port ${PORT}`);
 //})
+
+app.get("/", (req, res) => {
+    res.status(200).json({
+        success: true,
+        message: "Server is running perfectly!"
+    });
+});
+
 const httpServer = createServer(app);
 
 const io = new Server(httpServer, {
