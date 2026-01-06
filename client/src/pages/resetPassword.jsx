@@ -14,7 +14,7 @@ export default function ResetPassword() {
     if (password !== confirm) return toast.error('Passwords do not match');
 
     try {
-      const res = await fetch(`http://localhost:8080/api/v1/user/reset-password/${token}`, {
+      const res = await fetch(`https://dacntt-mylms-1.onrender.com/api/v1/user/reset-password/${token}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ newPassword: password })
