@@ -14,7 +14,7 @@ const transporter = nodemailer.createTransport({
 
 async function sendVerificationEmail(toEmail, token){
   console.log("Sending verification email to:", toEmail);
-    const verifyUrl = `${process.env.BACKEND_URL || "http://localhost:8080"}/api/v1/user/verify-email?token=${token}`;
+    const verifyUrl = `${process.env.BACKEND_URL || "https://dacntt-mylms-1.onrender.com"}/api/v1/user/verify-email?token=${token}`;
     const html = `
     <p>Hello,</p>
     <p>Please click the link below to verify your email address:</p>
@@ -43,7 +43,7 @@ async function sendEmail(toEmail, subject, html) {
 
 //tối 27/10 thêm chức năng quên mật khẩu
 async function sendResetPasswordEmail(toEmail, token) {
-  const resetUrl = `${process.env.FRONTEND_URL || "http://localhost:3000"}/reset-password?token=${token}`;
+  const resetUrl = `${process.env.FRONTEND_URL || "https://dacntt-my-lms.vercel.app"}/reset-password?token=${token}`;
   const html = `
     <p>Xin chào,</p>
     <p>Bấm vào link để đặt lại mật khẩu:</p>
