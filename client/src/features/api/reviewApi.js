@@ -40,7 +40,7 @@
 // export const { useGetCourseReviewsQuery, useCreateReviewMutation } = reviewApi;
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const REVIEW_URL = "http://localhost:8080/api/v1/"; 
+const REVIEW_URL = "https://dacntt-mylms-1.onrender.com/api/v1/"; 
 
 export const reviewApi = createApi({
     reducerPath: "reviewApi",
