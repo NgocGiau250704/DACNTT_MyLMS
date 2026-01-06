@@ -28,7 +28,7 @@ const keyword = searchParams.get("q");
 
   
 useEffect(() => {
-  fetch("http://localhost:8080/api/v1/user/instructors")
+  fetch("https://dacntt-mylms-1.onrender.com/api/v1/user/instructors")
     .then(res => res.json())
     .then(data => setInstructors(data.instructors || []));
 }, []);
@@ -44,7 +44,7 @@ useEffect(() => {
     params.append("maxPrice", max);
   }
 
-  fetch(`http://localhost:8080/api/v1/course/filter?${params.toString()}`)
+  fetch(`https://dacntt-mylms-1.onrender.com/api/v1/course/filter?${params.toString()}`)
     .then(res => res.json())
     .then(data => setFilteredCourses(data.courses || []));
 }, [selectedInstructor, priceRange]);
@@ -56,7 +56,7 @@ useEffect(() => {
     try {
       setSearchLoading(true);
       const res = await fetch(
-        `http://localhost:8080/api/v1/course/search?q=${keyword}`
+        `https://dacntt-mylms-1.onrender.com/api/v1/course/search?q=${keyword}`
       );
       const data = await res.json();
       setSearchCourses(data.courses || []);
