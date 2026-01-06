@@ -29,8 +29,8 @@ export const generateToken = (res, user, message) => {
 
   res.cookie("token", token, {
     httpOnly: true,
-    sameSite: "lax",  // quan trọng
-    secure: false,      // bắt buộc nếu dùng sameSite: none mới sửa lại thành false ngày 9-12
+    sameSite: "none",  // quan trọng
+    secure: true,      // bắt buộc nếu dùng sameSite: none mới sửa lại thành false ngày 9-12
     maxAge: 24 * 60 * 60 * 1000, // 1 ngày
   });
 
