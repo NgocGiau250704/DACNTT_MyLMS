@@ -24,7 +24,7 @@ export default function ChangePassword() {
       const token = localStorage.getItem("token");
 
       const res = await fetch(
-        "http://localhost:8080/api/v1/user/change-password",
+        "https://dacntt-mylms-1.onrender.com/api/v1/user/change-password",
         {
           method: "PUT",
           headers: {
