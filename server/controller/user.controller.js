@@ -136,7 +136,7 @@ export const forgotPassword = async (req, res) => {
     await user.save();
 
     const resetLink = `${
-      process.env.FRONTEND_URL || "http://localhost:3000"
+      process.env.FRONTEND_URL || "https://dacntt-my-lms.vercel.app"
     }/reset-password/${resetToken}`;
 
     const html = `
@@ -284,7 +284,7 @@ export const verifyEmail = async (req, res) => {
     // Redirect to frontend login page
     const frontendLoginUrl = process.env.FRONTEND_URL 
       ? `${process.env.FRONTEND_URL}/login` 
-      : "http://localhost:3000/login";
+      : "https://dacntt-my-lms.vercel.app/login";
       
     return res.redirect(frontendLoginUrl);
 
