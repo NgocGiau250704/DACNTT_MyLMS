@@ -11,11 +11,16 @@ const MyLearning = () => {
   const [assignmentsMap, setAssignmentsMap] = useState({});
   const [openAssignmentId, setOpenAssignmentId] = useState(null);
 
+  //sửa sáng 7/1
+  const BASE_URL = "https://dacntt-mylms-1.onrender.com";
+  
   useEffect(() => {
-    axios.get("/api/v1/user/my-learning").then((res) => {
+  axios.get(`${BASE_URL}/api/v1/user/my-learning`, { withCredentials: true })
+    .then((res) => {
       setCourses(res.data.courses || []);
     });
-  }, []);
+}, []);
+  //
 
   const handleClickCourse = async (courseId) => {
     if (openCourseId === courseId) {
