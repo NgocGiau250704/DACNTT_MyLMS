@@ -127,7 +127,8 @@ export const forgotPassword = async (req, res) => {
         .status(404)
         .json({ success: false, message: "Email not found" });
     }
-
+    console.log("==> Đang chuẩn bị gửi mail tới:", email);
+    
     const resetToken = crypto.randomBytes(32).toString("hex");
     const resetTokenExpiry = Date.now() + 15 * 60 * 1000;
 
@@ -146,13 +147,18 @@ export const forgotPassword = async (req, res) => {
       <p>If you didn't request this, you can ignore this email.</p>
     `;
     await sendEmail(user.email, "Reset your password", html);
-
+    console.log("==> Gửi mail THÀNH CÔNG");
     return res.json({
       success: true,
       message: "Password reset link sent to email",
     });
   } catch (err) {
-    console.error("forgotPassword error", err);
+    // console.error("forgotPassword error", err);
+    console.error("LỖI CHI TIẾT TẠI SERVER:", {
+      message: err.message,
+      stack: err.stack,
+      code: err.code
+    });
     return res.status(500).json({ success: false, message: "Server error" });
   }
 };
