@@ -29,7 +29,7 @@ const MyLearning = () => {
     setOpenCourseId(courseId); setOpenLectureId(null);
 
     if (!lecturesMap[courseId]) {
-      const res = await axios.get(`/api/v1/course/${courseId}/lecture`);
+      const res = await axios.get(`${BASE_URL}/api/v1/course/${courseId}/lecture`, { withCredentials: true });
       setLecturesMap((prev) => ({ ...prev, [courseId]: res.data.lectures || [] }));
     }
   };
@@ -41,8 +41,8 @@ const MyLearning = () => {
     setOpenLectureId(lectureId); setOpenAssignmentId(null);
 
     if (!assignmentsMap[lectureId]) {
-      const res = await axios.get(`/api/v1/assignment/lecture/${lectureId}`);
-      setAssignmentsMap((prev) => ({ ...prev, [lectureId]: res.data.assignments || [] }));
+      const res = await axios.get(`${BASE_URL}/api/v1/assignment/lecture/${lectureId}`, { withCredentials: true });
+    setAssignmentsMap((prev) => ({ ...prev, [lectureId]: res.data.assignments || [] }));
     }
   };
 
