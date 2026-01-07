@@ -13,6 +13,7 @@ cloudinary.config({
 export const uploadAssignmentFile = async (file) => {
   const result = await cloudinary.uploader.upload(file.path, {
     resource_type: "raw",
+    access_mode: "public",
     folder: "assignments",
     flags: "attachment",
   });
