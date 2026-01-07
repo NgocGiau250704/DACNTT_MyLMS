@@ -98,9 +98,12 @@ export default function CourseChat() {
     
       {openChat && (
         <div className="fixed bottom-24 right-6 z-50 h-[75vh] w-[900px] overflow-hidden rounded-2xl bg-white shadow-2xl">
-          <div className="grid h-full grid-cols-[320px_1fr]">
-          
-            <div className="border-r bg-gray-50 p-4">
+         <div className="grid h-full min-h-0 grid-cols-[320px_1fr]">
+
+        <div className="border-r bg-gray-50 p-4 flex flex-col">
+
+
+
               <div className="mb-4 flex items-center justify-between">
                 <h3 className="text-lg text-blue-600 font-semibold">Tin nhắn</h3>
                 <button onClick={() => setOpenChat(false)}>
@@ -108,7 +111,8 @@ export default function CourseChat() {
                 </button>
               </div>
 
-              <div className="space-y-2">
+           <div className="space-y-2 overflow-y-auto flex-1">
+
                 {conversations.map((c) => (
                   <div
                     key={c._id}
@@ -132,7 +136,9 @@ export default function CourseChat() {
             </div>
 
             
-            <div className="flex flex-col">
+         <div className="flex flex-col h-full min-h-0">
+
+
              
               <div className="border-b p-4 font-semibold text-blue-700">
                 {activeConv
@@ -141,7 +147,8 @@ export default function CourseChat() {
               </div>
 
              
-              <div className="flex-1 overflow-y-auto p-4">
+          <div className="flex-1 overflow-y-scroll p-4">
+
                 {messages.map((m) => {
                   const mine =
                     currentUser &&
@@ -171,13 +178,16 @@ export default function CourseChat() {
               </div>
 
               
-              <div className="flex text-black items-center gap-2 border-t p-3">
+      <div className="flex items-center gap-2 border-t p-3">
+
+
+
                 <input
                   value={text}
                   onChange={(e) => setText(e.target.value)}
                   onKeyDown={(e) => e.key === "Enter" && sendMessage()}
                   placeholder="Nhập tin nhắn..."
-                  className="flex-1 rounded-xl border px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full text-black rounded-xl border px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <button
                   onClick={sendMessage}
